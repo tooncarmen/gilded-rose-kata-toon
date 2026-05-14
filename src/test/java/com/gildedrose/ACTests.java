@@ -72,7 +72,7 @@ public class ACTests {
 
     @Test
     void sulfurasItemLifeCycleTest_bis() {
-        int[] sellIns = new int[]{0, 0, 0, 0};
+        int[] sellIns = new int[]{-1, -1, -1, -1};
         int[] qualities = new int[]{80, 80, 80, 80};
 
         for (int i = 0; i < 4; i++) {
