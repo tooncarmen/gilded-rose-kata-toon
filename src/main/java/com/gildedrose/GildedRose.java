@@ -5,6 +5,8 @@ class GildedRose {
     public static final String AGED_BRIE = "Aged Brie";
     public static final String BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
     public static final String CONJURED = "Conjured Mana Cake";
+    public static final int SULFURAS_QUALITY = 80;
+    public static final int MAX_QUALITY = 50;
 
     Item[] items;
 
@@ -24,7 +26,7 @@ class GildedRose {
         switch (item.name) {
             case SULFURAS:
                 // Legendary item - quality never changes
-                item.quality = 80;
+                item.quality = SULFURAS_QUALITY;
                 break;
 
             case AGED_BRIE:
@@ -97,7 +99,7 @@ class GildedRose {
     }
 
     private void increaseQuality(Item item, int amount) {
-        item.quality = Math.min(50, item.quality + amount);
+        item.quality = Math.min(MAX_QUALITY, item.quality + amount);
     }
 
     private void decreaseQuality(Item item, int amount) {
